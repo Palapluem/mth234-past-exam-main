@@ -1,0 +1,263 @@
+\documentclass[12pt, a4paper]{exam}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+\setmainlanguage{thai}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% Page Margins
+\geometry{top=0.8in, bottom=1in, left=0.8in, right=0.8in}
+
+% Fonts
+\newfontfamily\thaifont[
+  Scale=1.33,
+  Script=Thai,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+\setmainfont[
+  Scale=1.33,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+% Header and Footer
+\pagestyle{headandfoot}
+\extraheadheight{0.2in}
+
+\newcommand{\examheader}{%
+    ชื่อ-นามสกุล \makebox[3.0in]{\hrulefill} รหัสนักศึกษา \makebox[2.0in]{\hrulefill}
+}
+
+\firstpageheader{\examheader}{}{}
+\runningheader{\examheader}{}{}
+
+\firstpagefooter{\textit{MTH234 Question Bank (Full Version)}}{}{\thepage}
+\runningfooter{\textit{MTH234 Question Bank (Full Version)}}{}{\thepage}
+
+% Custom Thai Choice Labels
+\makeatletter
+\newcommand{\thaialph}[1]{%
+  \ifcase\value{#1}\or ก\or ข\or ค\or ง\or จ\else\@ctrerr\fi
+}
+\makeatother
+
+% Question Format
+\renewcommand{\thequestion}{\arabic{question}}
+\renewcommand{\questionlabel}{\thequestion.}
+
+% Choice Format
+\renewcommand{\thechoice}{\thaialph{choice}}
+\renewcommand{\choicelabel}{\thechoice)}
+
+\renewcommand{\choiceshook}{%
+  \setlength{\leftmargin}{2.5em}%
+  \setlength{\labelwidth}{20pt}%
+  \setlength{\labelsep}{5pt}%
+}
+
+\begin{document}
+
+\section*{Part 1: Assignment 1 (4 Questions)}
+\begin{questions}
+
+% Assignment Q1
+\question กำหนดให้ $A = \begin{bmatrix} 1 & -2 \\ 4 & 3 \\ -1 & 1 \end{bmatrix}$
+\begin{parts}
+    \part จงหาเมทริกซ์ $X$ ที่ทำให้ $2A - 3X = 4(A + X)$
+    \part จงหาค่า $AA^T$ (โดยที่ $A^T$ คือทรานสโพสของ $A$)
+\end{parts}
+\vspace{3cm}
+
+% Assignment Q2
+\question กำหนดให้
+\[
+A = \begin{bmatrix} 1 & -3 & 2 & 1 \\ 3 & -9 & 10 & 2 \\ 2 & -6 & 4 & 2 \\ 2 & -6 & 8 & 1 \end{bmatrix}
+\]
+จงใช้ลำดับของการดำเนินการตามแถวเบื้องต้น (elementary row operations) เพื่อหาเมทริกซ์ที่เป็นรูปแบบขั้นบันไดตามแถวแบบลดรูป (reduced row echelon form) ซึ่งสมมูลกันทางแถวกับเมทริกซ์ $A$
+\vspace{5cm}
+
+% Assignment Q3
+\question กำหนดให้ $A = \begin{bmatrix} 2 & 6 & 1 \\ 3 & 9 & 2 \\ 0 & -1 & 3 \end{bmatrix}$ จงใช้การดำเนินการตามแถวเบื้องต้นเพื่อหาค่าดีเทอร์มิแนนต์ของ $A$ ($\det(A)$) และเมทริกซ์ผกผัน $A^{-1}$
+\vspace{5cm}
+
+% Assignment Q4
+\question พิจารณาระบบสมการเชิงเส้น:
+\[
+\begin{aligned}
+x + 2y + 5z &= 15 \\
+-x + 7y - 5z &= -20 \\
+-x + 8y + 3z &= 4
+\end{aligned}
+\]
+จงหาผลเฉลยโดย:
+\begin{parts}
+    \part ใช้การดำเนินการตามแถวเบื้องต้น
+    \part ใช้กฎของคราเมอร์
+\end{parts}
+\vspace{5cm}
+
+\end{questions}
+
+\filbreak
+\section*{Part 2: Mock Exam 1 (6 Questions)}
+\begin{questions}
+
+% Mock1 Q1
+\question (6 คะแนน) จงแก้สมการเมทริกซ์ต่อไปนี้เพื่อหาค่า $X$:
+\[
+X^T \begin{bmatrix} 3 & 1 \\ -1 & 2 \end{bmatrix} - \begin{bmatrix} 1 & 4 \\ 2 & 0 \end{bmatrix} = \begin{bmatrix} 2 & -2 \\ 5 & 4 \end{bmatrix}
+\]
+โดยที่ $X^T$ คือทรานสโพสของเมทริกซ์ $X$
+\vspace{5cm}
+
+% Mock1 Q2
+\question (10 คะแนน) จงใช้การดำเนินการตามแถวเบื้องต้นเพื่อหา $\det(A)$ และ $A^{-1}$ (ถ้ามี) เมื่อ
+\[
+A = \begin{bmatrix} 0 & 0 & 2 & 0 \\ 1 & 0 & 0 & 1 \\ 0 & -1 & 3 & 0 \\ 2 & 1 & -5 & 3 \end{bmatrix}
+\]
+\vspace{5cm}
+
+% Mock1 Q3
+\question (8 คะแนน) จงใช้กฎของคราเมอร์ (Cramer's Rule) เพื่อแก้ระบบสมการต่อไปนี้:
+\[
+\begin{aligned}
+2x_1 + x_2 - x_3 &= 4 \\
+x_1 - 2x_2 + x_3 &= 1 \\
+3x_1 - 3x_2 + 2x_3 &= 0
+\end{aligned}
+\]
+\vspace{5cm}
+
+% Mock1 Q4
+\question (8 คะแนน) จงใช้การดำเนินการตามแถวเบื้องต้นเพื่อตรวจสอบว่าระบบสมการเชิงเส้นต่อไปนี้มีคำตอบ (consistent) หรือไม่ หากมี จงหาผลเฉลยทั่วไป:
+\[
+\begin{aligned}
+x_1 - 3x_2 + x_3 &= 2 \\
+3x_1 - 8x_2 + 2x_3 &= 5 \\
+2x_2 - 2x_3 &= -2
+\end{aligned}
+\]
+\vspace{5cm}
+
+% Mock1 Q5
+\question (8 คะแนน) จงหาค่าของ $a$ ทั้งหมดที่ทำให้ระบบสมการเชิงเส้น:
+\[
+\begin{aligned}
+x + y - z &= 1 \\
+2x + 3y + az &= 3 \\
+x + ay + 3z &= 2
+\end{aligned}
+\]
+อยู่ในแต่ละกรณีต่อไปนี้:
+(a) ไม่มีผลเฉลย
+(b) มีผลเฉลยชุดเดียว
+(c) มีผลเฉลยมากมายไม่จำกัด
+\vspace{5cm}
+
+% Mock1 Q6
+\question (10 คะแนน) สำหรับระบบสมการเชิงเส้น:
+\[
+\begin{aligned}
+w + 2x + 2y + 2z &= 1 \\
+w + 3x + 4y + 3z &= 6 \\
+2w + 6x + 9y + 8z &= 13 \\
+w + 5x + 8y + \omega z &= \varepsilon
+\end{aligned}
+\]
+จงหาค่าของ $\omega$ และ $\varepsilon$ ที่ทำให้ระบบสมการมีคำตอบในกรณีต่อไปนี้:
+(a) กรณี $\omega = 6, \varepsilon = 17$
+(b) กรณี $\omega = 5, \varepsilon = 16$
+\vspace{5cm}
+
+\end{questions}
+
+\filbreak
+\section*{Part 3: Mock Exam 2 (7 Questions)}
+\begin{questions}
+
+% Mock2 Q1
+\question (10 คะแนน) กำหนดให้ $A = \begin{bmatrix} -2 & 0 & 4 \\ 2 & 6 & 3 \\ 4 & -1 & 2 \end{bmatrix}$, $B = \begin{bmatrix} 1 & 0 & -3 \\ -2 & -5 & 0 \\ -2 & 1 & 2 \end{bmatrix}$ และ $C = \begin{bmatrix} 0 & -2 & 0 \\ -1 & -3 & 4 \end{bmatrix}$ จงหา:
+\begin{parts}
+    \part $3A - B^T$
+    \part $BC$ และ $CB$
+    \part เมทริกซ์ $X$ ที่ทำให้ $X(A+B) = C$
+\end{parts}
+\vspace{5cm}
+
+% Mock2 Q2 (Duplicate type as Assign Q2 but different matrix)
+\question (12 คะแนน) กำหนดให้
+\[
+A = \begin{bmatrix} 1 & 0 & -2 & 1 & 0 \\ 0 & -1 & -3 & 1 & 3 \\ -2 & -1 & 1 & -1 & 3 \\ 0 & 3 & 9 & 0 & -12 \end{bmatrix}
+\]
+จงหา Reduced Row Echelon Form (RREF) ของเมทริกซ์ $A$
+\vspace{5cm}
+
+% Mock2 Q3
+\question (15 คะแนน) จงหา $\det(A)$ และ $A^{-1}$ โดยใช้ Row Operations:
+\[
+A = \begin{bmatrix} 2 & 6 & 6 & 2 \\ 2 & 7 & 3 & 6 \\ 1 & 5 & 0 & 1 \\ 3 & 7 & 0 & 7 \end{bmatrix}
+\]
+\vspace{5cm}
+
+% Mock2 Q4 (Same as Assign Q4 but diff numbers)
+\question (13 คะแนน) พิจารณาระบบสมการเชิงเส้น:
+\[
+\begin{aligned}
+2x_1 + 3x_2 + 5x_3 &= 4 \\
+3x_1 + 5x_2 + 9x_3 &= 7 \\
+5x_1 + 9x_2 + 13x_3 &= 17
+\end{aligned}
+\]
+จงหาคำตอบโดยใช้ (a) Elementary Row Operations และ (b) Cramer's Rule
+\vspace{5cm}
+
+% Mock2 Q5
+\question (13 คะแนน) จงตรวจสอบว่า $A\mathbf{x} = \mathbf{b}$ มีผลเฉลยที่ไม่ชัด (non-trivial solutions) หรือไม่ และหาผลเฉลยทั่วไปและฐาน (basis) ของปริภูมิผลเฉลย:
+\[
+A = \begin{bmatrix} 1 & 2 & 3 \\ 2 & -1 & 1 \\ 3 & 1 & 4 \\ 5 & 1 & 6 \end{bmatrix}, \quad \mathbf{b} = \begin{bmatrix} 0 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+\]
+\vspace{5cm}
+
+% Mock2 Q6 (Similar to Mock1 Q5)
+\question (12 คะแนน) จงหาค่า $k$ ที่ทำให้ระบบสมการ:
+\[
+\begin{aligned}
+x + y + kz &= 3 \\
+x + ky + z &= 2 \\
+kx + y + z &= 1
+\end{aligned}
+\]
+มี (a) ไม่มีผลเฉลย, (b) มีผลเฉลยเดียว, (c) มีหลายผลเฉลย
+\vspace{5cm}
+
+% Mock2 Q7 (Extra)
+\question (15 คะแนน) จงหาค่าดีเทอร์มิแนนต์ของเมทริกซ์ต่อไปนี้โดยใช้สมบัติของดีเทอร์มิแนนต์:
+\[
+A = \begin{bmatrix} 1 & -2 & -1 & -2 & 1 \\ 2 & 1 & -2 & 1 & -3 \\ 3 & -1 & -3 & -1 & -1 \\ 4 & 1 & 1 & 0 & 1 \\ 5 & -5 & -5 & 2 & 0 \end{bmatrix}
+\]
+\vspace{5cm}
+
+\end{questions}
+\end{document}
