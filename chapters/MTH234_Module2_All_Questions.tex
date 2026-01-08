@@ -1,0 +1,318 @@
+\documentclass[12pt, a4paper]{exam}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+\setmainlanguage{thai}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% Page Margins
+\geometry{top=0.8in, bottom=1in, left=0.8in, right=0.8in}
+
+% Fonts
+\newfontfamily\thaifont[
+  Scale=1.33,
+  Script=Thai,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+\setmainfont[
+  Scale=1.33,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+% Header and Footer
+\pagestyle{headandfoot}
+\extraheadheight{0.2in}
+
+\newcommand{\examheader}{%
+    ชื่อ-นามสกุล \makebox[3.0in]{\hrulefill} รหัสนักศึกษา \makebox[2.0in]{\hrulefill}
+}
+
+\firstpageheader{\examheader}{}{}
+\runningheader{\examheader}{}{}
+
+\firstpagefooter{\textit{MTH234 Module 2 Review}}{}{\thepage}
+\runningfooter{\textit{MTH234 Module 2 Review}}{}{\thepage}
+
+\title{MTH234 Module 2 Review}
+\date{}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large การบ้าน ครั้งที่ 2 วิชา MTH234 Linear Algebra} \\
+    (สำหรับ กลุ่มเรียนที่ 1 นักศึกษา CPE และ HDS)
+\end{center}
+\vspace{0.2cm}
+\noindent \textbf{กำหนดส่ง:} วันอาทิตย์ที่ 19 ตุลาคม 2568 เวลา 23.59 น. (คืนวันอาทิตย์ ก่อนเที่ยงคืน) \\
+\noindent \textbf{คำสั่ง:} ให้ทำส่งทุกข้อ โดยบันทึกเป็นไฟล์ pdf ไฟล์เดียว แบบส่งทาง LEB2
+\vspace{0.5cm}
+
+\begin{questions}
+
+% HW2 Q1
+\question กำหนดให้ $M_2(\mathbb{R})$ เป็นปริภูมิเวกเตอร์ (vector space) ซึ่งประกอบไปด้วยเมทริกซ์ขนาด $2 \times 2$ โดยที่ทุกตำแหน่งภายในเมทริกซ์เป็นจำนวนจริงเท่านั้น และกำหนดให้
+\[
+S = \left\{ \begin{bmatrix} a & b \\ c & d \end{bmatrix} \in M_2(\mathbb{R}) \;\middle|\; a - d = b - c \right\}
+\]
+จงแสดงว่า $S$ เป็นปริภูมิย่อย (subspace) ของ $M_2(\mathbb{R})$
+\vspace{\stretch{1}}
+
+% HW2 Q2
+\question จงหาขนาดมิติ (dimension) ของปริภูมิย่อย (subspace) $U = \text{Span} \left\{ \begin{bmatrix} 0 \\ 1 \\ -2 \end{bmatrix}, \begin{bmatrix} 6 \\ 3 \\ 5 \end{bmatrix}, \begin{bmatrix} 5 \\ -7 \\ 4 \end{bmatrix} \right\}$ \\
+โดยแสดงรายละเอียดขั้นตอนวิธีอย่างชัดเจน
+\vspace{\stretch{1}}
+
+% HW2 Q3
+\question จงแสดงว่า เซต $\left\{ \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix} \right\}$ เป็นเซตอิสระเชิงเส้น (a linearly independent set) พร้อมทั้งทำการสร้างฐานหลัก (basis) ของ $\mathbb{R}^3$ จากเซตนี้ (extend this set as a basis for $\mathbb{R}^3$)
+\vspace{\stretch{1}}
+\newpage
+
+% HW2 Q4
+\question จงหาเซตของคำตอบที่เป็นไปได้ทั้งหมดของระบบสมการ
+\[
+\begin{aligned}
+x_1 + x_2 - x_3 &= 0 \\
+x_1 + 2x_2 + 4x_3 &= 0
+\end{aligned}
+\]
+และ จงพิจารณาว่า ขนาดมิติ (dimension) ของปริภูมิคำตอบ (solution space) ของระบบสมการนี้มีค่าเท่ากับเท่าใด
+\vspace{\stretch{1}}
+
+% HW2 Q5
+\question กำหนดให้ $B_1 = \left\{ \begin{bmatrix} 1 \\ 0 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix} \right\}$ และ $B_2 = \left\{ \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix} \right\}$ เป็นฐานหลัก (basis) ของ $\mathbb{R}^3$ ทั้งคู่
+\begin{parts}
+    \part จงหาเมทริกซ์การเปลี่ยนฐานหลัก (transition matrix) $_{B_1}P_{B_2}$ จากฐานหลัก $B_2$ ไปยังฐานหลัก $B_1$
+    \part กำหนดให้ $\bar{u} \in \mathbb{R}^3$ เป็นเวกเตอร์ซึ่งมีเวกเตอร์ระบุตำแหน่งเทียบกับฐานหลัก $B_1$ คือ $[\bar{u}]_{B_1} = \begin{bmatrix} 0 \\ -2 \\ 4 \end{bmatrix}$ จงหาเวกเตอร์ระบุตำแหน่ง $[\bar{u}]_{B_2}$ ของ $\bar{u}$ เทียบกับฐานหลัก $B_2$
+\end{parts}
+\vspace{\stretch{1}}
+\end{questions}
+
+\newpage
+\begin{center}
+    \textbf{\Large MODULE 2 MOCK EXAM (SET 1) (Total 50 points)}
+\end{center}
+\vspace{0.2cm}
+\noindent \textbf{Instruction:} Students must provide all details of your work. You may use any class materials. Calculators and other materials are not allowed.
+\vspace{0.5cm}
+
+\begin{questions}
+\setcounter{question}{0}
+
+% Mock Q1
+\question \textbf{(6 points)} กำหนดให้ $V = P_2$ เป็นปริภูมิเวกเตอร์ (vector space) ของพหุนามทั้งหมดที่มีดีกรีไม่เกิน 2 (polynomials of degree at most 2) กำหนดให้ $W$ เป็นสับเซต (subset) ของ $V$ นิยามโดย
+\[
+W = \{p(x) = ax^2 + bx + c \in P_2 \mid 3a - 2b - c = 0\}
+\]
+จงแสดงว่า $W$ เป็นปริภูมิย่อย (subspace) ของ $P_2$
+\vspace{\stretch{1}}
+
+% Mock Q2
+\question \textbf{(8 points)} กำหนดให้ $V = P_2$ เป็นปริภูมิเวกเตอร์ (vector space) ของพหุนามทั้งหมดที่มีดีกรีไม่เกิน 2 (polynomials of degree at most 2) จงตรวจสอบว่าพหุนาม $p(x) = 1 - 4x + 6x^2$ อยู่ในสแปน (span) ของเซต $S = \{p_1(x), p_2(x), p_3(x)\}$ หรือไม่ โดยที่
+\[
+p_1(x) = 1 + x - x^2, \quad p_2(x) = 2 + x, \quad p_3(x) = -1 + x - 3x^2
+\]
+\vspace{\stretch{1}}
+\newpage
+
+% Mock Q3
+\question \textbf{(8 points)} กำหนดให้เมทริกซ์ $A$ ดังนี้
+\[
+A = \begin{bmatrix} 1 & 2 & 0 & -1 \\ 2 & 4 & 1 & 1 \\ 3 & 6 & 1 & 0 \end{bmatrix}
+\]
+โดยการลดรูปเมทริกซ์ให้อยู่ในรูปแบบขั้นบันไดแบบแถว (row echelon form) จงหา
+\begin{enumerate}[label=(\alph*)]
+    \item ฐานหลัก (basis) ของปริภูมิแถว (Row Space) ของ $A$ และระบุขนาดมิติ (dimension)
+    \item ฐานหลัก (basis) ของปริภูมิหลัก (Column Space) ของ $A$ และระบุขนาดมิติ (dimension)
+    \item ฐานหลัก (basis) ของปริภูมิสู่ศูนย์ (Null Space) ของ $A$ และระบุขนาดมิติ (nullity)
+\end{enumerate}
+\vspace{\stretch{1}}
+
+% Mock Q4
+\question \textbf{(10 points)} กำหนดให้ $B$ และ $B'$ เป็นฐานหลัก (bases) สองฐานสำหรับปริภูมิเวกเตอร์ (vector space) $P_2$:
+\[
+\begin{aligned}
+B &= \{p_1(x), p_2(x), p_3(x)\} = \{1, 1+x, 1+x+x^2\} \\
+B' &= \{q_1(x), q_2(x), q_3(x)\} = \{1-x, x-x^2, 2x^2\}
+\end{aligned}
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item จงหาเมทริกซ์การเปลี่ยนฐานหลัก (transition matrix) $_{B'}P_{B}$ จากฐานหลัก $B$ ไปยังฐานหลัก $B'$
+    \item สำหรับพหุนาม $p(x) = 3 + x - 2x^2$ จงหาเวกเตอร์ระบุตำแหน่ง (coordinate vector) $[p(x)]_B$ ซึ่งคือเวกเตอร์ระบุตำแหน่งของ $p(x)$ เทียบกับฐานหลัก $B$
+    \item จงหาเวกเตอร์ระบุตำแหน่ง (coordinate vector) $[p(x)]_{B'}$ ซึ่งคือเวกเตอร์ระบุตำแหน่งของ $p(x)$ เทียบกับฐานหลัก $B'$
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Mock Q5
+\question \textbf{(8 points)} กำหนดให้เมทริกซ์ $A$ ดังนี้
+\[
+A = \begin{bmatrix} 1 & -2 & 1 & 3 & 0 \\ 2 & -4 & 3 & 7 & -1 \\ -1 & 2 & 1 & -1 & -2 \\ 3 & -6 & 2 & 8 & 1 \end{bmatrix}
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item จงหาแรงค์ (rank) ของ $A$
+    \item จงหามิติของปริภูมิสู่ศูนย์ (nullity) ของ $A$
+    \item จงตรวจสอบยืนยันอย่างชัดแจ้ง (explicitly verify) ว่าทฤษฎีบทแรงค์-มิติของปริภูมิสู่ศูนย์ (Rank-Nullity Theorem) เป็นจริงสำหรับเมทริกซ์นี้ โดยการหา rank และ nullity จากนิยาม
+\end{enumerate}
+\vspace{\stretch{1}}
+
+% Mock Q6
+\question \textbf{(10 points)} กำหนดให้ $W$ เป็นปริภูมิย่อย (subspace) ของ $\mathbb{R}^4$ โดยมีฐานหลัก (basis) คือ $S = \{w_1, w_2, w_3\}$ โดยที่
+\[
+w_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+w_2 = \begin{bmatrix} 1 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \quad
+w_3 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 1 \end{bmatrix}
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item จงใช้กระบวนการ Gram-Schmidt (Gram-Schmidt process) เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
+    \item โดยใช้ฐานหลักที่หาได้ในข้อ (a) จงหาการฉายเชิงตั้งฉาก (orthogonal projection) ของเวกเตอร์
+    \[
+    v = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+    \]
+    บนปริภูมิย่อย (subspace) $W$
+\end{enumerate}
+
+\end{questions}
+
+\newpage
+\begin{center}
+    \textbf{\Large MODULE 2 MOCK EXAM (SET 2) (Total 75 points + 45 Extra points)}
+\end{center}
+\vspace{0.2cm}
+\noindent \textbf{Instruction:} Students must provide all details of your work. You may use any class materials. Calculators and other materials are not allowed.
+\vspace{0.5cm}
+
+\begin{questions}
+\setcounter{question}{0}
+
+% Set 2 Q1
+\question \textbf{(10 points)} กำหนดให้ $V = P_3$ เป็นปริภูมิเวกเตอร์ (vector space) ของพหุนามทั้งหมดที่มีดีกรีไม่เกิน 3 (polynomials of degree at most 3) กำหนดให้ $W$ เป็นสับเซต (subset) ของ $V$ นิยามโดย
+\[
+W = \{p(x) = ax^3 + bx^2 + cx + d \in P_3 \mid 2a - b + c - 2d = 0\}
+\]
+จงแสดงว่า $W$ เป็นปริภูมิย่อย (subspace) ของ $P_3$
+\vspace{\stretch{1}}
+
+% Set 2 Q2
+\question \textbf{(15 points)} กำหนดให้ $S = \{v_1, v_2, v_3, v_4\}$ เป็นเซตของเวกเตอร์ใน $\mathbb{R}^3$ โดยที่
+\[
+v_1 = \begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \quad
+v_2 = \begin{bmatrix} -2 \\ -2 \\ 4 \end{bmatrix}, \quad
+v_3 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \quad
+v_4 = \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix}
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item จงหาฐานหลัก (basis) สำหรับปริภูมิย่อย $W = \text{Span}(S)$
+    \item จงตรวจสอบว่าเวกเตอร์ $u = \begin{bmatrix} 2 \\ 5 \\ -1 \end{bmatrix}$ อยู่ใน $W$ หรือไม่ หากอยู่ จงเขียน $u$ ในรูปผลรวมเชิงเส้น (linear combination) ของฐานหลัก
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Set 2 Q3
+\question \textbf{(10 points)} จงหาฐานหลัก (basis) สำหรับปริภูมิคำตอบ (solution space) ของระบบสมการเชิงเส้นเอกพันธุ์ (homogeneous linear system) ต่อไปนี้:
+\[
+\begin{aligned}
+x_1 + 2x_2 - x_3 + 3x_4 &= 0 \\
+2x_1 + 4x_2 - x_3 + 6x_4 &= 0 \\
+-x_1 - 2x_2 + 3x_3 - 9x_4 &= 0
+\end{aligned}
+\]
+\vspace{\stretch{1}}
+
+% Set 2 Q4
+\question \textbf{(13 points)} กำหนดให้ $B = \{b_1, b_2, b_3\}$ และ $C = \{c_1, c_2, c_3\}$ เป็นฐานหลัก (bases) สองฐานสำหรับ $\mathbb{R}^3$ เวกเตอร์ระบุตำแหน่ง (coordinate vectors) ของเวกเตอร์ในฐานหลัก $C$ เทียบกับฐานหลัก $B$ ถูกกำหนดดังนี้:
+\[
+[c_1]_B = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}, \quad
+[c_2]_B = \begin{bmatrix} 0 \\ 1 \\ -2 \end{bmatrix}, \quad
+[c_3]_B = \begin{bmatrix} 2 \\ -3 \\ 5 \end{bmatrix}
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item จงหาเมทริกซ์การเปลี่ยนฐานหลัก (transition matrix) $_B P_C$ (จากฐานหลัก $C$ ไปยังฐานหลัก $B$)
+    \item จงหาเมทริกซ์การเปลี่ยนฐานหลัก (transition matrix) $_C P_B$ (จากฐานหลัก $B$ ไปยังฐานหลัก $C$)
+    \item ถ้าเวกเตอร์ $v$ มีเวกเตอร์ระบุตำแหน่ง $[v]_C = \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}$ จงหาเวกเตอร์ระบุตำแหน่ง $[v]_B$
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Set 2 Q5
+\question \textbf{(12 points)} พิจารณาเมทริกซ์ $A$ ซึ่งขึ้นอยู่กับตัวแปรเสริม $k$:
+\[
+A = \begin{bmatrix} 1 & 2 & k \\ 2 & 5 & 2k \\ 1 & 3 & 2 \end{bmatrix}
+\]
+\begin{enumerate}[label=(\alph*)]
+    \item จงหาค่าแรงค์ (rank) ของ $A$ ในรูปของ $k$
+    \item จงหาค่าของ $k$ ที่ทำให้ระบบสมการ $A\mathbf{x} = \mathbf{0}$ มีผลเฉลยไม่ชัดแจ้ง (non-trivial solutions)
+    \item สำหรับค่า $k$ ที่ได้ในข้อ (b) จงหาฐานหลักสำหรับปริภูมิสู่ศูนย์ (Null Space) และฐานหลักสำหรับปริภูมิหลัก (Column Space) ของ $A$
+\end{enumerate}
+\vspace{\stretch{1}}
+
+% Set 2 Q6
+\question \textbf{(15 points)} กำหนดให้ $W$ เป็นปริภูมิย่อยของ $\mathbb{R}^4$ สแปนโดยเวกเตอร์ (spanned by the vectors)
+\[
+w_1 = \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \end{bmatrix}, \quad
+w_2 = \begin{bmatrix} 2 \\ 3 \\ 0 \\ 2 \end{bmatrix}, \quad
+w_3 = \begin{bmatrix} 4 \\ 2 \\ 2 \\ 0 \end{bmatrix}
+\]
+และให้ $v = \begin{bmatrix} -1 \\ 1 \\ 2 \\ 3 \end{bmatrix}$
+\begin{enumerate}[label=(\alph*)]
+    \item จงใช้กระบวนการ Gram-Schmidt (Gram-Schmidt process) เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
+    \item จงหาการฉายเชิงตั้งฉาก (orthogonal projection) ของ $v$ บน $W$
+    \item จงหาระยะทาง (distance) จากเวกเตอร์ $v$ ไปยังปริภูมิย่อย $W$
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Set 2 Q7 (Extra)
+\question \textbf{(Extra 15 points)} กำหนดให้ $S = \left\{ \begin{bmatrix} 1 \\ 0 \\ 1 \\ 1 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 1 \\ 2 \end{bmatrix}, \begin{bmatrix} 2 \\ -1 \\ 1 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 2 \\ 3 \\ 5 \end{bmatrix} \right\}$ พิจารณา $U = \text{Span } S$ ซึ่งเป็นปริภูมิย่อย (subspace) ของ $\mathbb{R}^4$
+\begin{enumerate}[label=(\alph*)]
+    \item จงหาฐานหลัก (basis) สำหรับ $U$
+    \item จงหาฐานหลักสำหรับส่วนเติมเต็มเชิงตั้งฉาก (orthogonal complement) $U^\perp$
+\end{enumerate}
+\vspace{\stretch{1}}
+
+% Set 2 Q8 (Extra)
+\question \textbf{(Extra 15 points)} จงใช้กระบวนการ Gram-Schmidt (Gram-Schmidt process) เพื่อสร้างฐานหลักเชิงตั้งฉาก (orthogonal basis) และฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับปริภูมิหลัก (column space) ของ
+\[
+A = \begin{bmatrix} -10 & 13 & 7 & -11 \\ 2 & 1 & -5 & 3 \\ -6 & 3 & 13 & -3 \\ 16 & -16 & -2 & 5 \\ 2 & 1 & -5 & -7 \end{bmatrix}
+\]
+\vspace{\stretch{1}}
+
+% Set 2 Q9 (Extra)
+\question \textbf{(Extra 15 points)} พิจารณาเวกเตอร์ต่อไปนี้ใน $\mathbb{R}^4$ พร้อมผลคูณภายในมาตรฐาน (standard inner product):
+\[
+\mathbf{u} = \begin{bmatrix} -1 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \quad
+\mathbf{v} = \begin{bmatrix} 2 \\ 1 \\ -3 \\ 0 \end{bmatrix}, \quad
+\mathbf{w} = \begin{bmatrix} a \\ -2 \\ 1 \\ 3 \end{bmatrix}, \quad
+\mathbf{z} = \begin{bmatrix} 3 \\ -1 \\ 2 \\ a \end{bmatrix},
+\]
+โดยที่ $a \in \mathbb{R}$ เป็นตัวแปรเสริม และให้ $\mathbf{p} = \begin{bmatrix} 3 \\ 1 \\ 4 \\ -2 \end{bmatrix}$
+\begin{enumerate}[label=(\alph*)]
+    \item สำหรับค่า $a$ ทั่วไป จงระบุคู่เวกเตอร์ทั้งหมด (all pairs) ในกลุ่ม $\{\mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{z}\}$ ที่ตั้งฉากกัน (are orthogonal) ถ้ามี พร้อมทั้งหาค่า $a$ ที่ทำให้มีคู่เวกเตอร์ตั้งฉากเพิ่มเติม
+    \item ให้ $a = 5$ และ $W = \text{span}\{\mathbf{u}, \mathbf{z}\}$ จงคำนวณการฉายเชิงตั้งฉาก (orthogonal projection) $\text{proj}_W(\mathbf{p})$ และระยะทางจาก $\mathbf{p}$ ไปยัง $W$
+    \item ให้ $L = \text{span}\{\mathbf{v}\}$ จงคำนวณ $\text{proj}_L(\mathbf{p})$
+\end{enumerate}
+
+\end{questions}
+\end{document}
