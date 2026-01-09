@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{exam}
+﻿\documentclass[12pt, a4paper]{exam}
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
@@ -151,11 +151,11 @@ A = \begin{bmatrix} 1 & 2 & 0 & -1 \\ 2 & 4 & 1 & 1 \\ 3 & 6 & 1 & 0 \end{bmatri
 \vspace{\stretch{1}}
 
 % Mock Q4
-\question \textbf{(10 points)} กำหนดให้ $B$ และ $B'$ เป็นฐานหลัก (bases) สองฐานสำหรับปริภูมิเวกเตอร์ (vector space) $P_2$:
+\question \textbf{(10 points)} กำหนดให้ $B$ และ $B'$ เป็นฐานหลัก (basis) สองฐานสำหรับปริภูมิเวกเตอร์ (vector space) $P_2$:
 \[
 \begin{aligned}
 B &= \{p_1(x), p_2(x), p_3(x)\} = \{1, 1+x, 1+x+x^2\} \\
-B' &= \{q_1(x), q_2(x), q_3(x)\} = \{1-x, x-x^2, 2x^2\}
+B' &= \{\vec{q}_1(x), \vec{q}_2(x), \vec{q}_3(x)\} = \{1-x, x-x^2, 2x^2\}
 \end{aligned}
 \]
 \begin{enumerate}[label=(\alph*)]
@@ -179,17 +179,17 @@ A = \begin{bmatrix} 1 & -2 & 1 & 3 & 0 \\ 2 & -4 & 3 & 7 & -1 \\ -1 & 2 & 1 & -1
 \vspace{\stretch{1}}
 
 % Mock Q6
-\question \textbf{(10 points)} กำหนดให้ $W$ เป็นปริภูมิย่อย (subspace) ของ $\mathbb{R}^4$ โดยมีฐานหลัก (basis) คือ $S = \{w_1, w_2, w_3\}$ โดยที่
+\question \textbf{(10 points)} กำหนดให้ $W$ เป็นปริภูมิย่อย (subspace) ของ $\mathbb{R}^4$ โดยมีฐานหลัก (basis) คือ $S = \{\vec{w}_1, \vec{w}_2, \vec{w}_3\}$ โดยที่
 \[
-w_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \quad
-w_2 = \begin{bmatrix} 1 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \quad
-w_3 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 1 \end{bmatrix}
+\vec{w}_1 = \begin{bmatrix} 1 \\ 1 \\ 1 \\ 0 \end{bmatrix}, \quad
+\vec{w}_2 = \begin{bmatrix} 1 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \quad
+\vec{w}_3 = \begin{bmatrix} 0 \\ 1 \\ 0 \\ 1 \end{bmatrix}
 \]
 \begin{enumerate}[label=(\alph*)]
-    \item จงใช้กระบวนการ Gram-Schmidt (Gram-Schmidt process) เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
+    \item จงใช้กระบวนการ Gram-Schmidt เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
     \item โดยใช้ฐานหลักที่หาได้ในข้อ (a) จงหาการฉายเชิงตั้งฉาก (orthogonal projection) ของเวกเตอร์
     \[
-    v = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}
+    \vec{v} = \begin{bmatrix} 1 \\ 0 \\ 0 \\ 0 \end{bmatrix}
     \]
     บนปริภูมิย่อย (subspace) $W$
 \end{enumerate}
@@ -216,16 +216,16 @@ W = \{p(x) = ax^3 + bx^2 + cx + d \in P_3 \mid 2a - b + c - 2d = 0\}
 \vspace{\stretch{1}}
 
 % Set 2 Q2
-\question \textbf{(15 points)} กำหนดให้ $S = \{v_1, v_2, v_3, v_4\}$ เป็นเซตของเวกเตอร์ใน $\mathbb{R}^3$ โดยที่
+\question \textbf{(15 points)} กำหนดให้ $S = \{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4\}$ เป็นเซตของเวกเตอร์ใน $\mathbb{R}^3$ โดยที่
 \[
-v_1 = \begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \quad
-v_2 = \begin{bmatrix} -2 \\ -2 \\ 4 \end{bmatrix}, \quad
-v_3 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \quad
-v_4 = \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix}
+\vec{v}_1 = \begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \quad
+\vec{v}_2 = \begin{bmatrix} -2 \\ -2 \\ 4 \end{bmatrix}, \quad
+\vec{v}_3 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \quad
+\vec{v}_4 = \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix}
 \]
 \begin{enumerate}[label=(\alph*)]
     \item จงหาฐานหลัก (basis) สำหรับปริภูมิย่อย $W = \text{Span}(S)$
-    \item จงตรวจสอบว่าเวกเตอร์ $u = \begin{bmatrix} 2 \\ 5 \\ -1 \end{bmatrix}$ อยู่ใน $W$ หรือไม่ หากอยู่ จงเขียน $u$ ในรูปผลรวมเชิงเส้น (linear combination) ของฐานหลัก
+    \item จงตรวจสอบว่าเวกเตอร์ $\vec{u} = \begin{bmatrix} 2 \\ 5 \\ -1 \end{bmatrix}$ อยู่ใน $W$ หรือไม่ หากอยู่ จงเขียน $u$ ในรูปผลรวมเชิงเส้น (linear combination) ของฐานหลัก
 \end{enumerate}
 \vspace{\stretch{1}}
 \newpage
@@ -242,16 +242,16 @@ x_1 + 2x_2 - x_3 + 3x_4 &= 0 \\
 \vspace{\stretch{1}}
 
 % Set 2 Q4
-\question \textbf{(13 points)} กำหนดให้ $B = \{b_1, b_2, b_3\}$ และ $C = \{c_1, c_2, c_3\}$ เป็นฐานหลัก (bases) สองฐานสำหรับ $\mathbb{R}^3$ เวกเตอร์ระบุตำแหน่ง (coordinate vectors) ของเวกเตอร์ในฐานหลัก $C$ เทียบกับฐานหลัก $B$ ถูกกำหนดดังนี้:
+\question \textbf{(13 points)} กำหนดให้ $B = \{\vec{b}_1, \vec{b}_2, \vec{b}_3\}$ และ $C = \{\vec{c}_1, \vec{c}_2, \vec{c}_3\}$ เป็นฐานหลัก (basis) สองฐานสำหรับ $\mathbb{R}^3$ เวกเตอร์ระบุตำแหน่ง (coordinate vectors) ของเวกเตอร์ในฐานหลัก $C$ เทียบกับฐานหลัก $B$ ถูกกำหนดดังนี้:
 \[
-[c_1]_B = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}, \quad
-[c_2]_B = \begin{bmatrix} 0 \\ 1 \\ -2 \end{bmatrix}, \quad
-[c_3]_B = \begin{bmatrix} 2 \\ -3 \\ 5 \end{bmatrix}
+[\,\vec{c}_1\,]_B = \begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}, \quad
+[\,\vec{c}_2\,]_B = \begin{bmatrix} 0 \\ 1 \\ -2 \end{bmatrix}, \quad
+[\,\vec{c}_3\,]_B = \begin{bmatrix} 2 \\ -3 \\ 5 \end{bmatrix}
 \]
 \begin{enumerate}[label=(\alph*)]
     \item จงหาเมทริกซ์การเปลี่ยนฐานหลัก (transition matrix) $_B P_C$ (จากฐานหลัก $C$ ไปยังฐานหลัก $B$)
     \item จงหาเมทริกซ์การเปลี่ยนฐานหลัก (transition matrix) $_C P_B$ (จากฐานหลัก $B$ ไปยังฐานหลัก $C$)
-    \item ถ้าเวกเตอร์ $v$ มีเวกเตอร์ระบุตำแหน่ง $[v]_C = \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}$ จงหาเวกเตอร์ระบุตำแหน่ง $[v]_B$
+    \item ถ้าเวกเตอร์ $v$ มีเวกเตอร์ระบุตำแหน่ง $[\,\vec{v}\,]_C = \begin{bmatrix} 2 \\ 1 \\ -1 \end{bmatrix}$ จงหาเวกเตอร์ระบุตำแหน่ง $[\,\vec{v}\,]_B$
 \end{enumerate}
 \vspace{\stretch{1}}
 \newpage
@@ -263,7 +263,7 @@ A = \begin{bmatrix} 1 & 2 & k \\ 2 & 5 & 2k \\ 1 & 3 & 2 \end{bmatrix}
 \]
 \begin{enumerate}[label=(\alph*)]
     \item จงหาค่าแรงค์ (rank) ของ $A$ ในรูปของ $k$
-    \item จงหาค่าของ $k$ ที่ทำให้ระบบสมการ $A\mathbf{x} = \mathbf{0}$ มีผลเฉลยไม่ชัดแจ้ง (non-trivial solutions)
+    \item จงหาค่าของ $k$ ที่ทำให้ระบบสมการ $A\vec{x} = \vec{0}$ มีผลเฉลยไม่ชัดแจ้ง (non-trivial solutions)
     \item สำหรับค่า $k$ ที่ได้ในข้อ (b) จงหาฐานหลักสำหรับปริภูมิสู่ศูนย์ (Null Space) และฐานหลักสำหรับปริภูมิหลัก (Column Space) ของ $A$
 \end{enumerate}
 \vspace{\stretch{1}}
@@ -271,15 +271,15 @@ A = \begin{bmatrix} 1 & 2 & k \\ 2 & 5 & 2k \\ 1 & 3 & 2 \end{bmatrix}
 % Set 2 Q6
 \question \textbf{(15 points)} กำหนดให้ $W$ เป็นปริภูมิย่อยของ $\mathbb{R}^4$ สแปนโดยเวกเตอร์ (spanned by the vectors)
 \[
-w_1 = \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \end{bmatrix}, \quad
-w_2 = \begin{bmatrix} 2 \\ 3 \\ 0 \\ 2 \end{bmatrix}, \quad
-w_3 = \begin{bmatrix} 4 \\ 2 \\ 2 \\ 0 \end{bmatrix}
+\vec{w}_1 = \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \end{bmatrix}, \quad
+\vec{w}_2 = \begin{bmatrix} 2 \\ 3 \\ 0 \\ 2 \end{bmatrix}, \quad
+\vec{w}_3 = \begin{bmatrix} 4 \\ 2 \\ 2 \\ 0 \end{bmatrix}
 \]
-และให้ $v = \begin{bmatrix} -1 \\ 1 \\ 2 \\ 3 \end{bmatrix}$
+และให้ $\vec{v} = \begin{bmatrix} -1 \\ 1 \\ 2 \\ 3 \end{bmatrix}$
 \begin{enumerate}[label=(\alph*)]
-    \item จงใช้กระบวนการ Gram-Schmidt (Gram-Schmidt process) เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
-    \item จงหาการฉายเชิงตั้งฉาก (orthogonal projection) ของ $v$ บน $W$
-    \item จงหาระยะทาง (distance) จากเวกเตอร์ $v$ ไปยังปริภูมิย่อย $W$
+    \item จงใช้กระบวนการ Gram-Schmidt เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
+    \item จงหาการฉายเชิงตั้งฉาก (orthogonal projection) ของ $\vec{v}$ บน $W$ $\left( \ \text{proj}_W \vec{v} \ \right)$
+    \item จงหาระยะทาง (distance) จากเวกเตอร์ $\vec{v}$ ไปยังปริภูมิย่อย $W$
 \end{enumerate}
 \vspace{\stretch{1}}
 \newpage
@@ -293,7 +293,7 @@ w_3 = \begin{bmatrix} 4 \\ 2 \\ 2 \\ 0 \end{bmatrix}
 \vspace{\stretch{1}}
 
 % Set 2 Q8 (Extra)
-\question \textbf{(Extra 15 points)} จงใช้กระบวนการ Gram-Schmidt (Gram-Schmidt process) เพื่อสร้างฐานหลักเชิงตั้งฉาก (orthogonal basis) และฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับปริภูมิหลัก (column space) ของ
+\question \textbf{(Extra 15 points)} จงใช้กระบวนการ Gram-Schmidt เพื่อสร้างฐานหลักเชิงตั้งฉาก (orthogonal basis) และฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับปริภูมิหลัก (column space) ของ
 \[
 A = \begin{bmatrix} -10 & 13 & 7 & -11 \\ 2 & 1 & -5 & 3 \\ -6 & 3 & 13 & -3 \\ 16 & -16 & -2 & 5 \\ 2 & 1 & -5 & -7 \end{bmatrix}
 \]
@@ -302,17 +302,22 @@ A = \begin{bmatrix} -10 & 13 & 7 & -11 \\ 2 & 1 & -5 & 3 \\ -6 & 3 & 13 & -3 \\ 
 % Set 2 Q9 (Extra)
 \question \textbf{(Extra 15 points)} พิจารณาเวกเตอร์ต่อไปนี้ใน $\mathbb{R}^4$ พร้อมผลคูณภายในมาตรฐาน (standard inner product):
 \[
-\mathbf{u} = \begin{bmatrix} -1 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \quad
-\mathbf{v} = \begin{bmatrix} 2 \\ 1 \\ -3 \\ 0 \end{bmatrix}, \quad
-\mathbf{w} = \begin{bmatrix} a \\ -2 \\ 1 \\ 3 \end{bmatrix}, \quad
-\mathbf{z} = \begin{bmatrix} 3 \\ -1 \\ 2 \\ a \end{bmatrix},
+\vec{u} = \begin{bmatrix} -1 \\ 2 \\ 0 \\ 1 \end{bmatrix}, \quad
+\vec{v} = \begin{bmatrix} 2 \\ 1 \\ -3 \\ 0 \end{bmatrix}, \quad
+\vec{w} = \begin{bmatrix} a \\ -2 \\ 1 \\ 3 \end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix} 3 \\ -1 \\ 2 \\ a \end{bmatrix},
 \]
-โดยที่ $a \in \mathbb{R}$ เป็นตัวแปรเสริม และให้ $\mathbf{p} = \begin{bmatrix} 3 \\ 1 \\ 4 \\ -2 \end{bmatrix}$
+โดยที่ $a \in \mathbb{R}$ เป็นตัวแปรเสริม และให้ $\vec{p} = \begin{bmatrix} 3 \\ 1 \\ 4 \\ -2 \end{bmatrix}$
 \begin{enumerate}[label=(\alph*)]
-    \item สำหรับค่า $a$ ทั่วไป จงระบุคู่เวกเตอร์ทั้งหมด (all pairs) ในกลุ่ม $\{\mathbf{u}, \mathbf{v}, \mathbf{w}, \mathbf{z}\}$ ที่ตั้งฉากกัน (are orthogonal) ถ้ามี พร้อมทั้งหาค่า $a$ ที่ทำให้มีคู่เวกเตอร์ตั้งฉากเพิ่มเติม
-    \item ให้ $a = 5$ และ $W = \text{span}\{\mathbf{u}, \mathbf{z}\}$ จงคำนวณการฉายเชิงตั้งฉาก (orthogonal projection) $\text{proj}_W(\mathbf{p})$ และระยะทางจาก $\mathbf{p}$ ไปยัง $W$
-    \item ให้ $L = \text{span}\{\mathbf{v}\}$ จงคำนวณ $\text{proj}_L(\mathbf{p})$
+    \item สำหรับค่า $a$ ทั่วไป จงระบุคู่เวกเตอร์ทั้งหมด (all pairs) ในกลุ่ม $\{\vec{u}, \vec{v}, \vec{w}, \vec{z}\}$ ที่ตั้งฉากกัน (are orthogonal) ถ้ามี พร้อมทั้งหาค่า $a$ ที่ทำให้มีคู่เวกเตอร์ตั้งฉากเพิ่มเติม
+    \item ให้ $a = 5$ และ $W = \text{span}\{\vec{u}, \vec{z}\}$ จงคำนวณการฉายเชิงตั้งฉาก (orthogonal projection) $\text{proj}_W(\vec{p})$ และระยะทางจาก $\vec{p}$ ไปยัง $W$
+    \item ให้ $L = \text{span}\{\vec{v}\}$ จงคำนวณ $\text{proj}_L(\vec{p})$
 \end{enumerate}
 
 \end{questions}
 \end{document}
+
+
+
+
+

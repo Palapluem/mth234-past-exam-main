@@ -1,0 +1,117 @@
+\documentclass[12pt, a4paper]{exam}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+\setmainlanguage{thai}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+% Page Margins
+\geometry{top=0.8in, bottom=1in, left=0.8in, right=0.8in}
+
+% Fonts
+\newfontfamily\thaifont[
+  Scale=1.33,
+  Script=Thai,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+\setmainfont[
+  Scale=1.33,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+\begin{document}
+
+\begin{questions}
+
+% Question 1
+\question (25 คะแนน) จงตอบคำถามต่อไปนี้
+\begin{enumerate}[label=\textbf{1.\arabic*)}]
+    \item ให้ $A = \begin{bmatrix} 2 & -1 & 5 \\ 3 & 0 & -2 \\ 1 & 4 & -3 \end{bmatrix}$ เป็นเมทริกซ์มาตรฐาน (standard matrix) สำหรับการแปลงเชิงเส้น (linear transformation) $T : \mathbb{R}^3 \to \mathbb{R}^3$ จงหาค่าของ $T\left(\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}\right)$
+    \item กำหนดให้เมทริกซ์ $B = \begin{bmatrix} 4 & 1 & 0 & 0 \\ 0 & 4 & 0 & 0 \\ 0 & 0 & 2 & 1 \\ 0 & 0 & 0 & 2 \end{bmatrix}$ สามารถเขียนในรูปแบบของจอร์แดน (Jordan form) เป็น $\begin{bmatrix} M_1 & 0 \\ 0 & M_2 \end{bmatrix}$ จงระบุเมทริกซ์ $M_1$ และ $M_2$ สำหรับเมทริกซ์นี้
+    \item จงหาเวกเตอร์เจาะจงทั่วไป ซึ่งมีลำดับขั้นเท่ากับ 2 (generalized eigenvector of rank 2) ที่สัมพันธ์กับค่าเจาะจง (eigenvalue) $\lambda = 3$ ของเมทริกซ์ $C = \begin{bmatrix} 4 & -1 \\ 1 & 2 \end{bmatrix}$
+    \item กำหนดเมทริกซ์ $D = \begin{bmatrix} 7 & -4 \\ 5 & -2 \end{bmatrix}$ จงหาสมการลักษณะเฉพาะ (characteristic equation) และค่าเจาะจง (eigenvalues) ทั้งหมดของเมทริกซ์ $D$
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 2
+\question (20 คะแนน) กําหนดให้ $T : \mathbb{R}^4 \to \mathbb{R}^3$ นิยามโดย
+\[ T\left(\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix}\right) = \begin{bmatrix} x_1 - x_2 + x_3 + x_4 \\ x_1 + 2x_2 - x_3 + x_4 \\ 2x_1 + x_2 + 2x_4 \end{bmatrix} \]
+\begin{enumerate}[label=\textbf{2.\arabic*)}]
+    \item จงแสดงว่า $T$ เป็นการแปลงเชิงเส้น (Show that $T$ is a linear transformation.)
+    \item จงหาฐานหลัก (a basis) ของ $Ker(T)$ และค่าของ $nullity(T)$
+    \item จงหาฐานหลัก (a basis) ของ $Range(T)$ และค่าของ $rank(T)$
+    \item จงตรวจสอบความถูกต้องโดยใช้ทฤษฎีบท Rank-Nullity และสรุปว่า $T$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง (one-to-one) หรือไม่ และเป็นฟังก์ชันทั่วถึง (onto) หรือไม่
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 3
+\question (20 คะแนน) จงพิจารณาว่า เมทริกซ์ $A$ ที่กำหนดให้ต่อไปนี้เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์ทแยงมุมได้หรือไม่ (Determine if $A$ is diagonalizable.)
+\[ A = \begin{bmatrix} 3 & -1 & 0 \\ -2 & 4 & 0 \\ 1 & 2 & 1 \end{bmatrix} \]
+\begin{enumerate}[label=\textbf{3.\arabic*)}]
+    \item จงหาค่าเจาะจง (eigenvalues) ทั้งหมดของ $A$ (คำใบ้: ค่าเจาะจงเป็นจำนวนเต็มบวกที่แตกต่างกันทั้งหมด)
+    \item จงหาฐานหลักของปริภูมิเจาะจง (basis for eigenspace) สำหรับแต่ละค่าเจาะจง
+    \item หาก $A$ เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์ทแยงมุมได้ จงทำการหาเมทริกซ์ $P$ และเมทริกซ์ทแยงมุม (diagonal matrix) $D$ ซึ่งทำให้ $A = PDP^{-1}$ (ถ้าแปลงไม่ได้ให้ระบุเหตุผล)
+    \item จงแสดงวิธีการใช้เมทริกซ์ $P$ และ $D$ นี้ในการคำนวณหาเมทริกซ์ $A^5$ (ตอบในรูปผลคูณเมทริกซ์ ไม่ต้องกระจายตัวเลข)
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 4
+\question (20 คะแนน) กำหนดให้
+\[ Q(x,y) = 7x^2 + 13y^2 + 8xy \]
+อยู่ในรูปแบบกำลังสอง (in the quadratic form)
+\begin{enumerate}[label=\textbf{4.\arabic*)}]
+    \item จงเขียน $Q(x,y)$ ในรูปสมการเมทริกซ์ $\mathbf{x}^T A \mathbf{x}$ โดยที่ $A$ เป็นเมทริกซ์สมมาตร (symmetric matrix)
+    \item จงหาเมทริกซ์เชิงตั้งฉาก $P$ (orthogonal matrix) ที่ทำให้ $P^T A P = D$ เป็นเมทริกซ์ทแยงมุม
+    \item จงทำการเปลี่ยนตัวแปร $\mathbf{x} = P \mathbf{x}'$ เพื่อให้รูปแบบกำลังสองของตัวแปรใหม่ ไม่มีเทอมผลคูณไขว้ปรากฏอยู่ (contains no cross-product terms) และระบุว่าเป็นสมการของกราฟรูปใด
+\end{enumerate}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 5
+\question (15 คะแนน) โจทย์ประยุกต์: การหมุนภาพในระนาบ (Rotation in $\mathbb{R}^2$)
+
+บทนำ (Introduction): ในงานคอมพิวเตอร์กราฟิก การหมุนวัตถุรอบจุดกำเนิด (Rotation) เป็นการแปลงเชิงเส้นที่สำคัญ หากเราต้องการหมุนจุด $\mathbf{x} = \begin{bmatrix} x \\ y \end{bmatrix}$ ทวนเข็มนาฬิกาเป็นมุม $\theta$ ไปยังจุดใหม่ $\mathbf{x}' = \begin{bmatrix} x' \\ y' \end{bmatrix}$ ความสัมพันธ์นี้สามารถเขียนในรูปสมการเมทริกซ์ได้เป็น
+\[ \mathbf{x}' = R_\theta \mathbf{x} \]
+โดยที่ $R_\theta$ คือ Rotation Matrix:
+\[ R_\theta = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \]
+ซึ่งได้มาจากการพิจารณาภาพของเวกเตอร์ฐานหลัก $\mathbf{e}_1, \mathbf{e}_2$ ภายใต้การหมุน
+
+จงตอบคำถามต่อไปนี้:
+\begin{enumerate}[label=\textbf{5.\arabic*)}]
+    \item \textbf{การคำนวณการหมุน (Forward Calculation) (5 คะแนน)} กำหนดให้มุมการหมุน $\theta = \frac{\pi}{6}$ ($30^\circ$) จงเขียนสมการเมทริกซ์แทนการแปลงนี้ และจงหาพิกัดใหม่ $\mathbf{x}'$ ของจุด $\mathbf{x} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}$ หลังจากถูกหมุนทวนเข็มนาฬิกาด้วยมุมนี้ (กำหนดให้ $\cos 30^\circ = \frac{\sqrt{3}}{2}, \sin 30^\circ = \frac{1}{2}$)
+    \item \textbf{การหาค่ามุม (Inverse Problem) (5 คะแนน)} สมมติว่าโปรแกรมกราฟิกทำการหมุนจุด $\mathbf{x} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ ไปยังจุดใหม่ $\mathbf{x}' = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ โดยการหมุนรอบจุดกำเนิดในทิศทางทวนเข็มนาฬิกา จงเขียนสมการเมทริกซ์
+    \[ \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} \]
+    เพื่อหาค่า มุมของการหมุน $\theta$ (ในหน่วยเรเดียน)
+    \item \textbf{การพิสูจน์ (Theoretical Proof) (5 คะแนน)} จงพิสูจน์สมบัติการหมุนซ้ำ $n$ ครั้ง โดยเขียนในรูปการคูณเมทริกซ์ว่า
+    \[ (R_\theta)^n = \begin{bmatrix} \cos(n\theta) & -\sin(n\theta) \\ \sin(n\theta) & \cos(n\theta) \end{bmatrix} \]
+    สำหรับจำนวนเต็มบวก $n$ ใดๆ
+\end{enumerate}
+
+\end{questions}
+\end{document}
