@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper]{exam}
+﻿\documentclass[12pt, a4paper]{exam}
 \usepackage{fontspec}
 \usepackage{xunicode}
 \usepackage{xltxtra}
@@ -18,6 +18,7 @@
 \setmainlanguage{thai}
 \XeTeXlinebreaklocale "th"
 \XeTeXlinebreakskip = 0pt plus 1pt
+\linespread{1.25}
 
 % Page Margins
 \geometry{top=0.8in, bottom=1in, left=0.8in, right=0.8in}
@@ -58,6 +59,7 @@
 \runningfooter{\textit{ข้อสอบรายวิชา MTH234 Linear Algebra}}{}{\thepage}
 
 \begin{document}
+\sloppy
 
 \setcounter{page}{2}
 
@@ -69,17 +71,17 @@
 % Question 1
 \question \textbf{(8 คะแนน)} จงตอบคำถามต่อไปนี้
 \begin{parts}
-    \part ให้ $A = \begin{bmatrix} 2 & -1 & 5 \\ 3 & 0 & -2 \\ 1 & 4 & -3 \end{bmatrix}$ เป็นเมทริกซ์มาตรฐาน (standard matrix) สำหรับการแปลงเชิงเส้น (linear transformation) $T : \mathbb{R}^3 \to \mathbb{R}^3$ จงหาค่าของ $T\left(\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}\right)$
+    \part \textbf{(2 คะแนน)} ให้ $A = \begin{bmatrix} 2 & -1 & 5 \\ 3 & 0 & -2 \\ 1 & 4 & -3 \end{bmatrix}$ เป็น\mbox{เมทริกซ์}มาตรฐาน (standard matrix) สำหรับ\mbox{การแปลงเชิงเส้น} (\mbox{Linear Transformation}) $T : \mathbb{R}^3 \to \mathbb{R}^3$ จงหาค่าของ $T\left(\begin{bmatrix} 1 \\ -2 \\ 3 \end{bmatrix}\right)$
     \vspace{\stretch{1}}
     
-    \part กำหนดให้เมทริกซ์ $B = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & -2 & 1 \\ 0 & 0 & 0 & -2 \end{bmatrix}$ สามารถเขียนในรูปแบบของจอร์แดน (Jordan form) เป็น $\begin{bmatrix} M_1 & 0 \\ 0 & M_2 \end{bmatrix}$ จงระบุเมทริกซ์ $M_1$ และ $M_2$ สำหรับเมทริกซ์นี้
+    \part \textbf{(2 คะแนน)} กำหนดให้\mbox{เมทริกซ์} $B = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 3 & 0 & 0 \\ 0 & 0 & -2 & 1 \\ 0 & 0 & 0 & -2 \end{bmatrix}$ สามารถเขียนในรูปแบบของจอร์แดน \newline (Jordan form) เป็น $\begin{bmatrix} M_1 & 0 \\ 0 & M_2 \end{bmatrix}$ จงระบุ\mbox{เมทริกซ์} $M_1$ และ $M_2$ สำหรับ\mbox{เมทริกซ์}นี้
     \vspace{\stretch{1}}
     
     \newpage
-    \part จงหาเวกเตอร์เจาะจงทั่วไป ซึ่งมีลำดับขั้นเท่ากับ 2 (generalized eigenvector of rank 2) ที่สัมพันธ์กับค่าเจาะจง (eigenvalue) $\lambda = 3$ ของเมทริกซ์ $C = \begin{bmatrix} 4 & -1 \\ 1 & 2 \end{bmatrix}$
+    \part \textbf{(2 คะแนน)} จงหา\mbox{เวกเตอร์}เจาะจงทั่วไป ซึ่งมีลำดับขั้นเท่ากับ 2 (generalized eigenvector of rank 2) \mbox{ที่สัมพันธ์กับค่าเจาะจง} (eigenvalue) $\lambda = 3$ ของ\mbox{เมทริกซ์} $C = \begin{bmatrix} 4 & -1 \\ 1 & 2 \end{bmatrix}$
     \vspace{\stretch{1}}
     
-    \part กำหนดเมทริกซ์ $D = \begin{bmatrix} 7 & -4 \\ 5 & -2 \end{bmatrix}$ จงหาสมการลักษณะเฉพาะ (characteristic equation) และค่าเจาะจง (eigenvalues) ทั้งหมดของเมทริกซ์ $D$
+    \part \textbf{(2 คะแนน)} กำหนด\mbox{เมทริกซ์} $D = \begin{bmatrix} 7 & -4 \\ 5 & -2 \end{bmatrix}$ จงหาสมการลักษณะเฉพาะ (characteristic equation) และค่าเจาะจง (eigenvalues) ทั้งหมดของ\mbox{เมทริกซ์} $D$
     \vspace{\stretch{1}}
 \end{parts}
 
@@ -89,31 +91,31 @@
 \question \textbf{(12 คะแนน)} กำหนดให้ $T : \mathbb{R}^4 \to \mathbb{R}^3$ นิยามโดย
 \[ T\left(\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\ x_4 \end{bmatrix}\right) = \begin{bmatrix} x_1 - x_2 + x_3 + x_4 \\ x_1 + 2x_2 - x_3 + x_4 \\ 2x_1 + x_2 + 2x_4 \end{bmatrix} \]
 \begin{parts}
-    \part จงแสดงว่า $T$ เป็นการแปลงเชิงเส้น (Show that $T$ is a linear transformation.)
+    \part \textbf{(3 คะแนน)} จงแสดงว่า $T$ เป็นการแปลงเชิงเส้น
     \vspace{\stretch{1}}
-    \part จงหาฐานหลัก (basis) ของ $Ker(T)$ และค่าของ $nullity(T)$
+    \part \textbf{(3 คะแนน)} จงหาฐานหลัก (basis) ของ $Ker(T)$ และค่าของ $nullity(T)$
     \vspace{\stretch{1}}
     \newpage
-    \part จงหาฐานหลัก (basis) ของ $Range(T)$ และค่าของ $rank(T)$
+    \part \textbf{(3 คะแนน)} จงหาฐานหลัก (basis) ของ $Range(T)$ และค่าของ $rank(T)$
     \vspace{\stretch{1}}
-    \part จงตรวจสอบว่า $T$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง (one-to-one) หรือไม่ และเป็นฟังก์ชันทั่วถึง (onto) หรือไม่
+    \part \textbf{(3 คะแนน)} จงตรวจสอบว่า $T$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง (one-to-one) \mbox{หรือไม่} และเป็นฟังก์ชันทั่วถึง (onto) \mbox{หรือไม่}
     \vspace{\stretch{1}}
 \end{parts}
 
 \newpage
 
 % Question 3
-\question \textbf{(12 คะแนน)} จงพิจารณาว่า เมทริกซ์ $A$ ที่กำหนดให้ต่อไปนี้เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์ทแยงมุมได้หรือไม่ (Determine if $A$ is diagonalizable.)
+\question \textbf{(12 คะแนน)} จงพิจารณาว่า \mbox{เมทริกซ์} $A$ ที่กำหนดให้ต่อไปนี้เป็น\mbox{เมทริกซ์}ที่แปลงให้เป็น\mbox{เมทริกซ์}\mbox{ทแยงมุม}ได้\mbox{หรือไม่} (Determine if $A$ is diagonalizable.)
 \[ A = \begin{bmatrix} 3 & -1 & 0 \\ -2 & 4 & 0 \\ 1 & 2 & 1 \end{bmatrix} \]
 \begin{parts}
-    \part จงหาค่าเจาะจง (eigenvalues) ทั้งหมดของ $A$
+    \part \textbf{(2 คะแนน)} จงหาค่าเจาะจง (eigenvalues) ทั้งหมดของ $A$
     \vspace{\stretch{1}}
-    \part จงหาฐานหลักของปริภูมิเจาะจง (basis for eigenspace) สำหรับแต่ละค่าเจาะจง
+    \part \textbf{(4 คะแนน)} จงหาฐานหลักของปริภูมิเจาะจง (basis for eigenspace) สำหรับแต่ละค่าเจาะจง
     \vspace{\stretch{1}}
     \newpage
-    \part หาก $A$ เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์ทแยงมุมได้ จงทำการหาเมทริกซ์ $P$ และเมทริกซ์ทแยงมุม (diagonal matrix) $D$ ซึ่งทำให้ $A = PDP^{-1}$ (ถ้าแปลงไม่ได้ให้ระบุเหตุผล)
+    \part \textbf{(4 คะแนน)} หาก $A$ เป็น\mbox{เมทริกซ์}ที่แปลงให้เป็น\mbox{เมทริกซ์}\mbox{ทแยงมุม}ได้ จงทำการหา\mbox{เมทริกซ์} $P$ และ\mbox{เมทริกซ์}\linebreak \mbox{ทแยงมุม} (diagonal matrix) $D$ ซึ่งทำให้ $A = PDP^{-1}$ (ถ้าแปลงไม่ได้ให้ระบุเหตุผล)
     \vspace{\stretch{1}}
-    \part จงแสดงวิธีการใช้เมทริกซ์ $P$ และ $D$ นี้ในการคำนวณหาเมทริกซ์ $A^5$
+    \part \textbf{(2 คะแนน)} จงแสดงวิธีการใช้\mbox{เมทริกซ์} $P$ และ $D$ นี้ในการคำนวณหา\mbox{เมทริกซ์} $A^5$
     \vspace{\stretch{1}}
 \end{parts}
 
@@ -124,34 +126,37 @@
 \[ Q(x,y) = 7x^2 + 13y^2 + 8xy \]
 อยู่ในรูปแบบกำลังสอง (in the quadratic form)
 \begin{parts}
-    \part จงหาเมทริกซ์สมมาตร $A$ ที่สอดคล้องกับรูปแบบกำลังสองนี้
+    \part \textbf{(3 คะแนน)} จงหา\mbox{เมทริกซ์}สมมาตร $A$ ที่สอดคล้องกับรูปแบบกำลังสองนี้
     \vspace{5cm}
-    \part จงหาเมทริกซ์เชิงตั้งฉาก $P$ (orthogonal matrix) ที่ทำให้ $P^T A P = D$ เป็นเมทริกซ์ทแยงมุม
+    \part \textbf{(4 คะแนน)} จงหา\mbox{เมทริกซ์}เชิงตั้งฉาก $P$ (orthogonal matrix) ที่ทำให้ $P^T A P = D$ เป็น\mbox{เมทริกซ์}\mbox{ทแยงมุม}
     \vspace{\stretch{1}}
     \newpage
-    \part จงทำการเปลี่ยนตัวแปร $\vec{x} = P \vec{y}$ เพื่อให้รูปแบบกำลังสองของตัวแปรใหม่ ไม่มีเทอมผลคูณไขว้ปรากฏอยู่ (contains no cross-product terms) และระบุว่าเป็นสมการของกราฟรูปใด
+    \part \textbf{(4 คะแนน)} จงทำการเปลี่ยนตัวแปร $\vec{x} = P \vec{y}$ เพื่อให้รูปแบบกำลังสองของตัวแปรใหม่ ไม่มีเทอมผลคูณไขว้ปรากฏอยู่ (contains no cross-product terms)
     \vspace{\stretch{1}}
 \end{parts}
 
 \newpage
 
 % Question 5
-\question \textbf{(7 คะแนน)} การหมุนภาพในระนาบ (Rotation in 2D) ในระบบคอมพิวเตอร์กราฟิก คือการหมุนวัตถุรอบจุดกำเนิด (Rotation) ซึ่งถือเป็น Linear Transformation พื้นฐานที่สำคัญ หากกำหนดให้ $T : \mathbb{R}^2 \to \mathbb{R}^2$ เป็นฟังก์ชันการแปลงเชิงเส้นที่ทำการหมุนเวกเตอร์ $\vec{x}$ ทวนเข็มนาฬิกาเป็นมุม $\theta$ ไปยังจุดใหม่ $\vec{x}' = T(\vec{x})$ ความสัมพันธ์นี้สามารถเขียนในรูปสมการเมทริกซ์ได้เป็น
+\question \textbf{(7 คะแนน)} {\addfontfeature{LetterSpace=-3} การหมุนภาพในระนาบ (Rotation in 2D) ในระบบคอมพิวเตอร์กราฟิก คือการหมุนวัตถุรอบ\mbox{จุดกำเนิด}} (Rotation) ซึ่งถือเป็น Linear Transformation พื้นฐานที่สำคัญ หากกำหนดให้ $T : \mathbb{R}^2 \to \mathbb{R}^2$ เป็นฟังก์ชันการแปลงเชิงเส้นที่ทำการหมุน\mbox{เวกเตอร์} $\vec{x}$ ทวนเข็มนาฬิกาเป็นมุม $\theta$ (ในหน่วย เรเดียน) ไปยังจุดใหม่ $\vec{x}' = T(\vec{x})$ ความสัมพันธ์นี้สามารถเขียนในรูป\mbox{สมการ\mbox{เมทริกซ์}}ได้เป็น
 \[ T(\vec{x}) = R_\theta \vec{x} \]
 โดยที่ $R_\theta$ คือ Rotation Matrix:
 \[ R_\theta = \begin{bmatrix} \operatorname{\text{\fontfamily{cmr}\selectfont cos}}\theta & -\operatorname{\text{\fontfamily{cmr}\selectfont sin}}\theta \\ \operatorname{\text{\fontfamily{cmr}\selectfont sin}}\theta & \operatorname{\text{\fontfamily{cmr}\selectfont cos}}\theta \end{bmatrix} \]
-ซึ่งเมทริกซ์นี้สร้างขึ้นจากการพิจารณาภาพของเวกเตอร์ฐานหลัก $\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ และ $\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ ภายใต้การหมุน
+ซึ่ง\mbox{เมทริกซ์}นี้สร้างขึ้นจากการพิจารณาภาพของ\mbox{เวกเตอร์}ฐานหลัก $\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ และ $\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ ภายใต้การหมุน
 
 \begin{parts}
-    \part จงหาเวกเตอร์ผลลัพธ์ $\vec{x}'$ จากการหมุนเวกเตอร์ $\vec{x} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}$ ทวนเข็มนาฬิกาเป็นมุม $\theta = \dfrac{\pi}{3}$
+    \part \textbf{(2 คะแนน)} จงหา\mbox{เวกเตอร์}ผลลัพธ์ $\vec{x}'$ จากการหมุน\mbox{เวกเตอร์} ${\vec{x} = \begin{bmatrix} 2 \\ 4 \end{bmatrix}}$ ทวนเข็มนาฬิกาเป็นมุม $\theta = \dfrac{\pi}{3}$
     \vspace{\stretch{1}}
     
-    \part จงหามุม $\theta$ (ในหน่วยเรเดียน) ที่ทำให้การหมุนภาพเปลี่ยนพิกัดจาก $\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}$ ไปยัง $\vec{x}' = \begin{bmatrix} -1 \\ 1 \end{bmatrix}$
+    \part \textbf{(3 คะแนน)} จงหามุม $\theta$ ที่ทำให้การหมุนภาพเปลี่ยนพิกัดจาก ${\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}}$ ไปยัง ${\vec{x}' = \begin{bmatrix} -1 \\ 1 \end{bmatrix}}$
     \vspace{\stretch{1}}
     
-    \part จงพิสูจน์ว่า หากกำหนดฟังก์ชันการหมุนด้วยมุม $\theta = 2n\pi$ เมื่อ $n$ เป็นจำนวนเต็มใดๆ เมทริกซ์การแปลง $R_\theta$ จะสมมูลกับ เมทริกซ์เอกลักษณ์ (Identity Matrix)
+    \part \textbf{(2 คะแนน)} จงพิสูจน์ว่า หากกำหนดฟังก์ชันการหมุนด้วยมุม $\theta = 2n\pi$ เมื่อ $n$ เป็นจำนวนเต็มใด ๆ \mbox{เมทริกซ์}การแปลง $R_\theta$ จะสมมูลกับ \mbox{เมทริกซ์}เอกลักษณ์ (Identity Matrix)
     \vspace{\stretch{1}}
 \end{parts}
 
 \end{questions}
 \end{document}
+
+
+

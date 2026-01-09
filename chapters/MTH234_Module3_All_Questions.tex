@@ -64,18 +64,18 @@
     \item จงแสดงว่า $T$ เป็นการแปลงเชิงเส้น (Show that $T$ is a linear transformation.)
     \item จงหาฐานหลัก (a basis) ของ $Ker(T)$ และค่าของ $nullity(T)$
     \item จงหาฐานหลัก (a basis) ของ $Range(T)$ และค่าของ $rank(T)$
-    \item จงตรวจสอบความถูกต้องโดยใช้ทฤษฎีบท Rank-Nullity และสรุปว่า $T$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง (one-to-one) หรือไม่ และเป็นฟังก์ชันทั่วถึง (onto) หรือไม่
+    \item จงตรวจสอบความถูกต้องโดยใช้ทฤษฎีบท Rank-Nullity และสรุปว่า $T$ เป็นฟังก์ชันหนึ่งต่อหนึ่ง (one-to-one) \mbox{หรือไม่} และเป็นฟังก์ชันทั่วถึง (onto) \mbox{หรือไม่}
 \end{enumerate}
 \vspace{\stretch{1}}
 \newpage
 
 % Question 3
-\question (20 คะแนน) จงพิจารณาว่า เมทริกซ์ $A$ ที่กำหนดให้ต่อไปนี้เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์ทแยงมุมได้หรือไม่ (Determine if $A$ is diagonalizable.)
+\question (20 คะแนน) จงพิจารณาว่า เมทริกซ์ $A$ ที่กำหนดให้ต่อไปนี้เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์\mbox{ทแยงมุม}ได้\mbox{หรือไม่} (Determine if $A$ is diagonalizable.)
 \[ A = \begin{bmatrix} 3 & -1 & 0 \\ -2 & 4 & 0 \\ 1 & 2 & 1 \end{bmatrix} \]
 \begin{enumerate}[label=\textbf{3.\arabic*)}]
     \item จงหาค่าเจาะจง (eigenvalues) ทั้งหมดของ $A$ (คำใบ้: ค่าเจาะจงเป็นจำนวนเต็มบวกที่แตกต่างกันทั้งหมด)
     \item จงหาฐานหลักของปริภูมิเจาะจง (basis for eigenspace) สำหรับแต่ละค่าเจาะจง
-    \item หาก $A$ เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์ทแยงมุมได้ จงทำการหาเมทริกซ์ $P$ และเมทริกซ์ทแยงมุม (diagonal matrix) $D$ ซึ่งทำให้ $A = PDP^{-1}$ (ถ้าแปลงไม่ได้ให้ระบุเหตุผล)
+    \item หาก $A$ เป็นเมทริกซ์ที่แปลงให้เป็นเมทริกซ์\mbox{ทแยงมุม}ได้ จงทำการหาเมทริกซ์ $P$ และเมทริกซ์\mbox{ทแยงมุม} (diagonal matrix) $D$ ซึ่งทำให้ $A = PDP^{-1}$ (ถ้าแปลงไม่ได้ให้ระบุเหตุผล)
     \item จงแสดงวิธีการใช้เมทริกซ์ $P$ และ $D$ นี้ในการคำนวณหาเมทริกซ์ $A^5$ (ตอบในรูปผลคูณเมทริกซ์ ไม่ต้องกระจายตัวเลข)
 \end{enumerate}
 \vspace{\stretch{1}}
@@ -87,7 +87,7 @@
 อยู่ในรูปแบบกำลังสอง (in the quadratic form)
 \begin{enumerate}[label=\textbf{4.\arabic*)}]
     \item จงเขียน $Q(x,y)$ ในรูปสมการเมทริกซ์ $\mathbf{x}^T A \mathbf{x}$ โดยที่ $A$ เป็นเมทริกซ์สมมาตร (symmetric matrix)
-    \item จงหาเมทริกซ์เชิงตั้งฉาก $P$ (orthogonal matrix) ที่ทำให้ $P^T A P = D$ เป็นเมทริกซ์ทแยงมุม
+    \item จงหาเมทริกซ์เชิงตั้งฉาก $P$ (orthogonal matrix) ที่ทำให้ $P^T A P = D$ เป็นเมทริกซ์\mbox{ทแยงมุม}
     \item จงทำการเปลี่ยนตัวแปร $\mathbf{x} = P \mathbf{x}'$ เพื่อให้รูปแบบกำลังสองของตัวแปรใหม่ ไม่มีเทอมผลคูณไขว้ปรากฏอยู่ (contains no cross-product terms) และระบุว่าเป็นสมการของกราฟรูปใด
 \end{enumerate}
 \vspace{\stretch{1}}
@@ -110,7 +110,7 @@
     เพื่อหาค่า มุมของการหมุน $\theta$ (ในหน่วยเรเดียน)
     \item \textbf{การพิสูจน์ (Theoretical Proof) (5 คะแนน)} จงพิสูจน์สมบัติการหมุนซ้ำ $n$ ครั้ง โดยเขียนในรูปการคูณเมทริกซ์ว่า
     \[ (R_\theta)^n = \begin{bmatrix} \cos(n\theta) & -\sin(n\theta) \\ \sin(n\theta) & \cos(n\theta) \end{bmatrix} \]
-    สำหรับจำนวนเต็มบวก $n$ ใดๆ
+    สำหรับจำนวนเต็มบวก $n$ ใด ๆ
 \end{enumerate}
 
 \end{questions}
