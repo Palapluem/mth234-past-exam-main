@@ -24,6 +24,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning, calc}
 \usepackage{graphicx}
+\usepackage{svg}
 \usepackage{amssymb}
 \usepackage{array}
 \usepackage{multirow}
@@ -54,7 +55,7 @@
 % ================= HEADER SECTION =================
 \noindent
 % --- โลโก้ (จัดกึ่งกลางหน้ากระดาษแบบ Absolute) ---
-\makebox[\textwidth][c]{\raisebox{-2.5cm}[0pt][0pt]{\includegraphics[width=2.5cm]{../images/KMUTT_Logo.png}}}%
+\makebox[\textwidth][c]{\raisebox{-2.5cm}[0pt][0pt]{\includesvg[width=2.5cm]{../images/KMUTT_Logo.svg}}}%
 \vspace{-\baselineskip}
 
 \noindent
@@ -142,10 +143,10 @@
 % ================= CONDITIONS =================
 \noindent
 \begin{tabular}{@{} p{2.8cm} p{\dimexpr\linewidth-2.8cm-0.5cm\relax} @{}}
-    \fontsize{16}{20}\selectfont \textbf{\underline{เงื่อนไขการสอบ}} & \fontsize{16}{20}\selectfont 1. \textbf{ให้นักศึกษาปฏิบัติแนวปฏิบัติการสอบอย่างเคร่งครัด} \\[0.6em]
-    & \fontsize{16}{20}\selectfont 2. \textbf{ไม่อนุญาต}ให้นำเครื่องคำนวณตามระเบียบมหาวิทยาลัยเข้าห้องสอบ \\[0.6em]
-    & \fontsize{16}{20}\selectfont 3. \textbf{ไม่อนุญาต}ให้นำตำราและเอกสารใด ๆ เข้าห้องสอบ \\[0.6em]
-    & \fontsize{16}{20}\selectfont 4. \textbf{ห้าม}ประพฤติปฏิบัติอันเป็นเหตุแห่งการทุจริตทุกรูปแบบในระหว่างการสอบโดยเด็ดขาด
+    \fontsize{16}{20}\selectfont \smash{\textbf{\underline{เงื่อนไขการสอบ}}} & \fontsize{16}{20}\selectfont 1. \vphantom{ที่จุ}\textbf{ให้นักศึกษาปฏิบัติแนวปฏิบัติการสอบอย่างเคร่งครัด} \\[0.4em]
+    & \fontsize{16}{20}\selectfont 2. \vphantom{ที่จุ}\textbf{ไม่อนุญาต}ให้นำเครื่องคำนวณตามระเบียบมหาวิทยาลัยเข้าห้องสอบ \\[0.4em]
+    & \fontsize{16}{20}\selectfont 3. \vphantom{ที่จุ}\textbf{ไม่อนุญาต}ให้นำตำราและเอกสารใด ๆ เข้าห้องสอบ \\[0.4em]
+    & \fontsize{16}{20}\selectfont 4. \vphantom{ที่จุ}\textbf{ห้าม}ประพฤติปฏิบัติอันเป็นเหตุแห่งการทุจริตทุกรูปแบบในระหว่างการสอบโดยเด็ดขาด
 \end{tabular}
 
 \vspace{0.1cm}
