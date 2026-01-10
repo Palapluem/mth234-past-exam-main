@@ -1,0 +1,186 @@
+﻿\documentclass[12pt, a4paper]{exam}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{polyglossia}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, calc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{lastpage}
+\usepackage{amssymb}
+\usepackage{multirow}
+\usepackage{amsmath}
+
+\setmainlanguage{thai}
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\linespread{1.25}
+
+% Page Margins
+\geometry{top=0.8in, bottom=1in, left=0.8in, right=0.8in}
+
+% Fonts
+\newfontfamily\thaifont[
+  Scale=1.33,
+  Script=Thai,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+\setmainfont[
+  Scale=1.33,
+  Path = ../fonts/,
+  Extension = .ttf,
+  BoldFont = *-Bold,
+  ItalicFont = *-Italic,
+  BoldItalicFont = *-BoldItalic
+]{THSarabunNew}
+
+% Header and Footer
+\pagestyle{headandfoot}
+\extraheadheight{0.2in}
+
+\newcommand{\examheader}{%
+    ชื่อ-นามสกุล \makebox[3.0in]{\hrulefill} รหัสนักศึกษา \makebox[2.0in]{\hrulefill}
+}
+
+\firstpageheader{\examheader}{}{}
+\runningheader{\examheader}{}{}
+
+\firstpagefooter{\textit{ข้อสอบรายวิชา MTH234 Linear Algebra}}{}{\thepage}
+\runningfooter{\textit{ข้อสอบรายวิชา MTH234 Linear Algebra}}{}{\thepage}
+
+% Custom Thai Choice Labels
+\makeatletter
+\newcommand{\thaialph}[1]{%
+  \ifcase\value{#1}\or ก\or ข\or ค\or ง\or จ\else\@ctrerr\fi
+}
+\makeatother
+
+% Question Format
+\renewcommand{\thequestion}{\arabic{question}}
+\renewcommand{\questionlabel}{\thequestion.}
+
+% Choice Format
+\renewcommand{\thechoice}{\thaialph{choice}}
+\renewcommand{\choicelabel}{\thechoice)}
+
+\renewcommand{\choiceshook}{%
+  \setlength{\leftmargin}{2.5em}%
+  \setlength{\labelwidth}{20pt}%
+  \setlength{\labelsep}{5pt}%
+}
+
+\begin{document}
+\sloppy
+\setcounter{page}{2}
+
+\noindent \textbf{\underline{คำสั่ง}} : ให้นักศึกษาทำข้อสอบทุกข้อ โดยทำลงไปในข้อสอบ
+\vspace{0.5cm}
+
+\begin{questions}
+
+% Question 1: Subspaces (Abstract P3)
+\question \textbf{(5 คะแนน)} กำหนดให้ $V = P_3$ เป็น\mbox{ปริภูมิ\mbox{เวกเตอร์}} (vector space) ของพหุนามทั้งหมดที่มีดีกรีไม่เกิน 3 (polynomials of degree at most 3) และกำหนดให้ $W$ เป็นสับเซต (subset) ของ $V$ นิยามโดย
+\[
+W = \{p(x) = ax^3 + bx^2 + cx + d \in P_3 \mid 2a - b + c - 2d = 0\}
+\]
+จงแสดงว่า $W$ เป็นปริภูมิย่อย (subspace) ของ $P_3$
+\vspace{\stretch{1}}
+\newpage
+
+% Question 2: Span, Basis, Linear Combination (R^3)
+\question \textbf{(6 คะแนน)} กำหนดให้ $S = \{\vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{v}_4\}$ เป็นเซตของ\mbox{เวกเตอร์}ใน $\mathbb{R}^3$ โดยที่
+\[
+\vec{v}_1 = \begin{bmatrix} 1 \\ 1 \\ -2 \end{bmatrix}, \quad
+\vec{v}_2 = \begin{bmatrix} -2 \\ -2 \\ 4 \end{bmatrix}, \quad
+\vec{v}_3 = \begin{bmatrix} 0 \\ 1 \\ 1 \end{bmatrix}, \quad
+\vec{v}_4 = \begin{bmatrix} 1 \\ 3 \\ 0 \end{bmatrix}
+\]
+\begin{parts}
+    \part \textbf{(3 คะแนน)} จงหาฐานหลัก (basis) สำหรับปริภูมิย่อย $W = \text{Span}(S)$ พร้อมระบุขนาดมิติ (dimension) ของ $W$
+    \vspace{\stretch{2}}
+    \part \textbf{(3 คะแนน)} จงตรวจสอบว่า\mbox{เวกเตอร์} $\vec{u} = \begin{bmatrix} 2 \\ 5 \\ -1 \end{bmatrix}$ อยู่ใน $W$ \mbox{หรือไม่} หากอยู่ จงเขียน $u$ \mbox{ในรูปผลรวมเชิงเส้น} (linear combination)
+\end{parts}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 3: Solution Space (Homogeneous System)
+\question \textbf{(6 คะแนน)} จงหาฐานหลัก (basis) และระบุขนาดมิติ (dimension) สำหรับปริภูมิคำตอบ (solution space) ของระบบสมการเชิงเส้นเอกพันธุ์ (Homogeneous System) ที่มี 4 ตัวแปรต่อไปนี้:
+\[
+\begin{aligned}
+x_1 + x_2 + 2x_3 - 2x_4 &= 0 \\
+2x_1 - x_2 - 8x_3 + 11x_4 &= 0 \\
+x_1 + 2x_2 + 6x_3 - 7x_4 &= 0
+\end{aligned}
+\]
+\vspace{\stretch{1}}
+\newpage
+
+% Question 4: Matrix Analysis with Parameter (High difficulty)
+\question \textbf{(7 คะแนน)} พิจารณา\mbox{เมทริกซ์} $A$ ซึ่งขึ้นอยู่กับตัวแปรเสริม $k$:
+\[
+A = \begin{bmatrix} 1 & 2 & k \\ 2 & 5 & 2k \\ 1 & 3 & 2 \end{bmatrix}
+\]
+\begin{parts}
+    \part \textbf{(2 คะแนน)} จงหาค่าแรงค์ (rank) ของ $A$ ในรูปของ $k$ (แยกกรณีตามค่า $k$)
+    \vspace{\stretch{1}}
+    \part \textbf{(2 คะแนน)} จงหาค่าของ $k$ ที่ทำให้ระบบสมการ $A\vec{x} = \vec{0}$ มีผลเฉลยไม่ชัดแจ้ง (non-trivial solutions)
+    \vspace{\stretch{1}}
+    \newpage
+    \part \textbf{(3 คะแนน)} จากค่า $k$ ที่ได้ จงหาฐานหลักสำหรับปริภูมิสู่ศูนย์ (Null Space) และฐานหลักสำหรับ\mbox{ปริภูมิหลัก} (Column Space) ของ $A$
+\end{parts}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 5: Change of Basis (R^3)
+\question \textbf{(8 คะแนน)} กำหนดให้ $B_1$ และ $B_2$ เป็นฐานหลัก (basis) สองฐานสำหรับ\mbox{ปริภูมิ\mbox{เวกเตอร์}} $\mathbb{R}^3$ โดยเขียนในรูป\mbox{เมทริกซ์} (matrix form) ดังนี้:
+\[
+B_1 = \left\{ \begin{bmatrix} 1 \\ 2 \\ -1 \end{bmatrix}, \begin{bmatrix} 2 \\ 3 \\ 0 \end{bmatrix}, \begin{bmatrix} 1 \\ 3 \\ -2 \end{bmatrix} \right\}
+\quad \text{และ} \quad
+B_2 = \left\{ \begin{bmatrix} 1 \\ 0 \\ 2 \end{bmatrix}, \begin{bmatrix} 2 \\ 1 \\ 3 \end{bmatrix}, \begin{bmatrix} 0 \\ 1 \\ 2 \end{bmatrix} \right\}
+\]
+\begin{parts}
+    \part \textbf{(3 คะแนน)} จงหา\mbox{เมทริกซ์}การเปลี่ยนฐานหลัก (transition matrix) $_{B_2}P_{B_1}$ จากฐานหลัก $B_1$ ไปยังฐานหลัก $B_2$
+    \vspace{\stretch{1}}
+    \newpage
+    \part \textbf{(3 คะแนน)} กำหนดให้ $\vec{v} = \begin{bmatrix} 1 \\ 4 \\ -5 \end{bmatrix}$ จงหา\mbox{เวกเตอร์}ระบุตำแหน่ง (coordinate vector) $[\,\vec{v}\,]_{B_1}$ ของ\mbox{เวกเตอร์} $v$ เทียบกับฐานหลัก $B_1$
+    \vspace{\stretch{1}}
+    \part \textbf{(2 คะแนน)} จงหา\mbox{เวกเตอร์}ระบุตำแหน่ง (coordinate vector) $[\,\vec{v}\,]_{B_2}$ ของ\mbox{เวกเตอร์} $v$ เทียบกับฐานหลัก $B_2$
+\end{parts}
+\vspace{\stretch{1}}
+\newpage
+
+% Question 6: Orthogonality & Gram-Schmidt (R^4)
+\question \textbf{(8 คะแนน)} กำหนดให้ $W$ เป็นปริภูมิย่อยของ $\mathbb{R}^4$ สแปนโดย\mbox{เวกเตอร์} (spanned by the vectors)
+\[
+\vec{w}_1 = \begin{bmatrix} 1 \\ 2 \\ 1 \\ 1 \end{bmatrix}, \quad
+\vec{w}_2 = \begin{bmatrix} 2 \\ 3 \\ 0 \\ 2 \end{bmatrix}, \quad
+\vec{w}_3 = \begin{bmatrix} 4 \\ 2 \\ 2 \\ 0 \end{bmatrix}
+\]
+และให้ $\vec{v} = \begin{bmatrix} -1 \\ 1 \\ 2 \\ 3 \end{bmatrix}$
+\begin{parts}
+    \part \textbf{(5 คะแนน)} จงใช้กระบวนการ Gram-Schmidt เพื่อหาฐานหลักเชิงตั้งฉากปกติ (orthonormal basis) สำหรับ $W$
+    \vspace{\stretch{1}}
+    \newpage
+    \part \textbf{(3 คะแนน)} จงหาการฉายเชิงตั้งฉาก (orthogonal projection) ของ $\vec{v}$ บน $W$ $\left( \ \text{proj}_W \vec{v} \ \right)$
+\end{parts}
+\vspace{\stretch{1}}
+
+\end{questions}
+\end{document}
+
+
+
+
+
+
+
+
